@@ -1,0 +1,115 @@
+Note: a main.rs file must be present 
+===============================================================================================
+CARGO
+
+Create a new Rust Project: 
+    cargo new dirName
+
+Create Excectable File in target/debug/dirName:
+    cargo build
+Note: Because the default build is a debug build, 
+      Cargo puts the binary in a directory named debug. 
+      You can run the executable with the above command.
+Note: Running cargo build for the first time also causes Cargo 
+      to create a new file at the top level: 'Cargo.lock' 
+      This file keeps track of the exact versions of dependencies 
+      in your project.
+
+Compile and run: 
+    cargo run 
+
+Check code to make sure it compiles without producing an executable:
+    cargo check 
+Note: check is much faster than build. Use it while writing to check
+      for compiler errors. 
+
+-----------------------------------------------------------------------------------------------
+AUTO-FORMAT 
+
+rustfmt fileName
+
+-----------------------------------------------------------------------------------------------
+
+
+
+===============================================================================================
+VARIABLES
+
+By default, variables in Rust are immutable(cannot be changed)
+and strongly typed. 
+
+For example, if I do this:
+
+let x = 4; 
+
+This is invalid:
+
+x = 5; 
+
+If I want to change the value of x there are two ways I can do that:
+
+let mut x = 4;  => x = 5;   //where 'mut' signifies mutable
+    or
+let x = 4;  =>  let x = 5; //where we just create a new x over the original. 
+
+
+-----------------------------------------------------------------------------------------------
+NAME SHADOWING - occurs when you use the same var name in a different scope.
+
+What is the output of this code? 
+main.rs:
+
+    fn main() {
+
+        let x = 4;
+        println!("x is: {}", x)
+
+        {
+            let x = 2;
+            println!("x is: {}", x)
+        }
+
+        let x = x + 1;
+        println!("x is: {}", x);
+
+    }
+
+Output: 
+x is 4
+x is 2
+x is 5
+
+By using curly braces within our main fn, we created a new scope.
+In rust, a variable defined in a child scope will not effect the parent scope version.
+
+HOWEVER, the child scope may use the var from the parent scope if it does not have its 
+own version. This still will not effect the parent scope version. 
+
+
+-----------------------------------------------------------------------------------------------
+CHANGING TYPE 
+
+althought we may not mix and match types how we do in python, we can change the type of a var
+using 'let.':
+
+let x = 10; 
+let x = "Hello!"
+
+This works because we are overwriting the og x using let.
+Notice, that the following is invalid:
+
+let mut x = 10; 
+x = "Hello!"
+
+Because we have not redeclared or reinitialized x even if it is not mutable. 
+
+-----------------------------------------------------------------------------------------------
+CONSTANTS - can never be changed or redefined.
+
+Note: must be written in capital snake case, and have a defined type: 
+    
+
+const SECONDS_IN_MINUTE: u32 = 60;
+----------------------------------------------------------------------------------------------
+
+==============================================================================================
