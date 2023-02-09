@@ -113,3 +113,16 @@ const SECONDS_IN_MINUTE: u32 = 60;
 ----------------------------------------------------------------------------------------------
 
 ==============================================================================================
+PRIMITIVE DATA TYPES
+
+There are two types of primitive data types: Scalar and Compound
+
+A Scalar data type is something that has a finite set of possible 
+values, following some scale, i.e. each value can be compared 
+to any otehr value as greater, less than, or equal to. 
+
+A Compound data type is any data type which can be constructed
+in a program using the programming languages primitices and other 
+composite types. 
+
+
