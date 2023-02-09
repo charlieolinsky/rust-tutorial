@@ -1,0 +1,12 @@
+Rust Allows you to make:
+
+- Command Line Tools
+- Web Services
+- Dev Ops Tools
+- Embedded Systems
+- Bio-Informatics
+- Machine Learning
+
+And more!
+
+

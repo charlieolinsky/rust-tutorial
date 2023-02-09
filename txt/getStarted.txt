@@ -1,0 +1,8 @@
+Windows: 
+
+Docs: https://doc.rust-lang.org/book/title-page.html
+Install Rust: https://www.rust-lang.org/tools/install
+Install C++ Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+To test if installation is correct, open terminal and type 'rustc' 
+If you get an output then you are good!
