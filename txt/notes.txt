@@ -126,3 +126,24 @@ in a program using the programming languages primitices and other
 composite types. 
 
 
+
+
+
+==============================================================================================
+PRELUDE 
+
+The list of things that Rust automatically imports into every 
+Rust program. It's kept as small as possible, and is focused on
+things, particularly traits, which are used in almost every rust program.
+
+==============================================================================================
+USER INPUT
+
+Note: User Input is NOT included in the prelude. 
+
+use std::io;    //Use the std crate, io module. 
+
+Note: the syntax '::' is known as the path seperator operator.
+It allows us to go from a package to a module and from a module to
+a function or method definied within it. 
+
